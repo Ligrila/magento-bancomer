@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+	<bancomer_standard_redirect>
+		<reference name="content">
+			<block type="bancomer/standard_redirect" name="redirect" template="bancomer/redirect.phtml"></block>
+		</reference>
+	</bancomer_standard_redirect>
+</layout>

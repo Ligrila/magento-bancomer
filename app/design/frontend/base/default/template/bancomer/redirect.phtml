@@ -1,0 +1,21 @@
+<script type="text/javascript" src='<?php echo Mage::getBaseUrl('js') ?>bancomer.js'></script>
+
+
+<form method="post" name="Bbva" id="bancomer_standard_checkout" action="<?php echo $action ?>" target="bancomer_window">
+
+
+<?php foreach ($peticion as $field => $value): ?>
+	<input type="hidden" value="<?php echo $value ?>" name="<?php echo $field?>" id="<?php echo $field;?>"/>
+<?php endforeach;?>
+
+<input type="hidden" value="<?php echo $windowstate ?>" name="windowstate" id="windowstate"/>
+
+</form>
+
+
+<center><br /><br />
+
+<h3><?php echo $this->__('Clicking the button will be redirected to  Bancomer Bbva to make your payment securely.') ?></h3><br />
+<img src='<?php echo $this->getSkinUrl('images/bancomer/bancomer_tpv.jpg') ?>' border="0" /><br/>
+<input class="form-button" type="button" onclick="javascript:openBancomerWindow();" value='<?php echo $this->__('Go to Bancomer') ?>' />
+</center>

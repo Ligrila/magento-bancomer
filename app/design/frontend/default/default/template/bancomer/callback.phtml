@@ -1,0 +1,12 @@
+<p>Procesando...</p>
+
+<script type="text/javascript">
+	var callbackUrl = "<?php echo $callbackUrl ?>";
+	if (window.opener){
+		window.opener.focus();
+		window.opener.location = window.location;
+		window.close();
+	} else{
+		window.location = callbackUrl;
+	}
+</script>

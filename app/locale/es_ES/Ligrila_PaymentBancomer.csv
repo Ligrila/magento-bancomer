@@ -1,0 +1,21 @@
+Clicking on continue will refer you to the payment gateway of BBVA. Data from credit card is not stored on our servers.,Haciendo click en continuar te redirigiremos a la plataforma de pago del BBVA. Ningún dato de la tarjeta de crédito se guarda en nuestros servidores.
+Go to Bancomer, Ir al Bancomer
+Clicking the button will be redirected to  Bancomer Bbva to make your payment securely.,Haciendo click en el botón serás redirigido al TPV del Bbva Bancomer para que puedas realizar tu pago de forma segura.
+Transaction canceled by Bank. Please try ordering again.,Transacción cancelada por el Banco. Por favor intenta ordenar nuevamente.
+Payment was made correctly with transaction id : %s,El pago fue realizado correctamente con el ID de transacción %s
+Entring to TPV,Entra al TPV
+Currency code (%s) is not compatible with Bbva,Código de moneda (% s) no es compatible con el BBVA
+Encrypted key,Clave encriptada
+Terminal Id, Id de Terminal
+Business Id, Id del Comercio
+Key to decrypt,Clave para desencriptar
+Entring bancomer order status,Estado del pedido al entrar al bancomer,
+Canceled order status,Estado de la orden cancelada
+Window State,Estado de la ventana
+New order status,Estado para el nuevo pedido
+POP Up - Standard (1),Emergente - Por defecto (1)
+Full Screen - Same Window (2),Pantalla Completa - Misma ventana (2)
+Only if payment is made successfully,Solo si el pago es realizado con éxito
+Create invoices automatically, Crear facturas automáticamente
+Send Email Order Confirmation,Enviar confirmacion de email
+<br />Invoice #%s created,<br />Factura #%s creada
