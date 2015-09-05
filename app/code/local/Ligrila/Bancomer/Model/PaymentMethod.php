@@ -341,18 +341,18 @@ class Ligrila_Bancomer_Model_PaymentMethod extends Mage_Payment_Model_Method_Abs
 
 
 	function processResponse($params){
-		if(isset($params['Ds_Amount'])&&isset($params['Ds_Order'])&&isset($params['Ds_MerchantCode'])&&isset($params['Ds_currency'])&&isset($params['Ds_Response'])&&isset($params['Ds_Signature'])&&isset($params['localizador'])){
+		if(isset($params['Ds_Amount'])&&isset($params['Ds_Order'])&&isset($params['Ds_MerchantCode'])&&isset($params['Ds_Currency'])&&isset($params['Ds_Response'])&&isset($params['Ds_Signature'])&&isset($params['localizador'])){
 			$Ds_Amount = $params['Ds_Amount'];
 			$Ds_Order = $params['Ds_Order'];
 			$Ds_MerchantCode = $params['Ds_MerchantCode'];
-			$Ds_Currency = $params['Ds_currency'];
+			$Ds_Currency = $params['Ds_Currency'];
 			$Ds_Response = $params['Ds_Response'];
 			$Ds_Signature = $params['Ds_Signature'];
 			$clave = $this->getConfigData('clave');
 			$localizador = $params['localizador'];
 			$firma = strtoupper(sha1("$Ds_Amount$Ds_Order$Ds_MerchantCode$Ds_Currency$Ds_Response$clave"));
 
-			if($firma==$Ds_Signature){
+			if($firma==strtoupper($Ds_Signature)){
 					$response = (int)$Ds_Response;
 					if($response===0){
 						//aceptado
@@ -362,7 +362,8 @@ class Ligrila_Bancomer_Model_PaymentMethod extends Mage_Payment_Model_Method_Abs
 						$this->errorPeticion($localizador,$comment);
 					}
 			} else{
-					die("Invalid signature");
+					$comment = Mage::helper('bancomer')->__('Invalid Signature');
+                                        $this->errorPeticion($localizador,$comment);
 			}
 
 		} else{
